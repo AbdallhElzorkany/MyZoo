@@ -1,12 +1,11 @@
-"use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faStethoscope,
-  faSyringe,
-  faScissors,
-  faPills,
-} from "@fortawesome/free-solid-svg-icons";
-import { faClock, faHeart } from "@fortawesome/free-regular-svg-icons";
+  Stethoscope,
+  Syringe,
+  Scissors,
+  Pill,
+  Heart,
+  Clock,
+} from "lucide-react";
 const Services = () => {
   return (
     <section id="services" className="w-full py-12 md:py-24 lg:py-32">
@@ -28,10 +27,7 @@ const Services = () => {
         <div className="mx-auto grid max-w-5xl gap-8 py-12 sm:grid-cols-2 lg:grid-cols-3">
           <div className="shadow-sm rounded-2xl border-green-100 border-1 shadow-green-100 hover:shadow-md transition-shadow">
             <div className="p-6 flex flex-col items-center text-center space-y-4">
-              <FontAwesomeIcon
-                icon={faStethoscope}
-                className="text-5xl text-green-600"
-              />
+              <Stethoscope className="text-green-600 size-20" />
               <h3 className="text-xl font-bold text-green-800">
                 Wellness Exams
               </h3>
@@ -43,10 +39,7 @@ const Services = () => {
           </div>
           <div className="shadow-sm rounded-2xl border-green-100 border-1 shadow-green-100 hover:shadow-md transition-shadow">
             <div className="p-6 flex flex-col items-center text-center space-y-4">
-              <FontAwesomeIcon
-                icon={faSyringe}
-                className="text-5xl text-green-600"
-              />
+              <Syringe className="text-green-600 size-20" />
               <h3 className="text-xl font-bold text-green-800">Vaccinations</h3>
               <p className="text-gray-600">
                 Protect your pet from common diseases with our vaccination
@@ -56,10 +49,7 @@ const Services = () => {
           </div>
           <div className="shadow-sm rounded-2xl border-green-100 border-1 shadow-green-100 hover:shadow-md transition-shadow">
             <div className="p-6 flex flex-col items-center text-center space-y-4">
-              <FontAwesomeIcon
-                icon={faScissors}
-                className="text-5xl text-green-600"
-              />
+              <Scissors className="text-green-600 size-20" />
               <h3 className="text-xl font-bold text-green-800">Surgery</h3>
               <p className="text-gray-600">
                 From routine spay/neuter to complex procedures in our
@@ -69,10 +59,7 @@ const Services = () => {
           </div>
           <div className="shadow-sm rounded-2xl border-green-100 border-1 shadow-green-100 hover:shadow-md transition-shadow">
             <div className="p-6 flex flex-col items-center text-center space-y-4">
-              <FontAwesomeIcon
-                icon={faPills}
-                className="text-5xl text-green-600"
-              />
+              <Pill className="text-green-600 size-20" />
               <h3 className="text-xl font-bold text-green-800">Pharmacy</h3>
               <p className="text-gray-600">
                 On-site pharmacy for convenient access to medications your pet
@@ -82,10 +69,7 @@ const Services = () => {
           </div>
           <div className=" shadow-sm rounded-2xl border-green-100 border-1 shadow-green-100 hover:shadow-md transition-shadow">
             <div className="p-6 flex flex-col items-center text-center space-y-4">
-              <FontAwesomeIcon
-                icon={faHeart}
-                className="text-5xl text-green-600"
-              />
+              <Heart className="text-green-600 size-20" />
               <h3 className="text-xl font-bold text-green-800">
                 Emergency Care
               </h3>
@@ -97,10 +81,7 @@ const Services = () => {
           </div>
           <div className=" shadow-sm rounded-2xl border-green-100 border-1 shadow-green-100 hover:shadow-md transition-shadow">
             <div className="p-6 flex flex-col items-center text-center space-y-4">
-              <FontAwesomeIcon
-                icon={faClock}
-                className="rotate-45 text-5xl text-green-600"
-              />
+              <Clock className="text-green-600 size-20" />
               <h3 className="text-xl font-bold text-green-800">Dental Care</h3>
               <p className="text-gray-600">
                 Complete dental services to maintain your pet&apos;s oral health
