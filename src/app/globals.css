@@ -1,4 +1,7 @@
 @import "tailwindcss";
+body {
+  font-family: var(--font-cairo);
+}
 @theme {
   --font-cairo: --font-cairo;
 }

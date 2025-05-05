@@ -1,10 +1,13 @@
 import Link from "next/link";
-import { PawPrint } from "lucide-react";
-const Header = () => {
+import { PawPrint, CircleUserRound } from "lucide-react";
+import { auth } from "@/auth";
+import SignOut from "./SignOut";
+const Header = async () => {
+  const session = await auth();
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 border-green-600 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between m-auto">
-        <div className="flex items-center text-green-600 gap-2">
+        <div className="flex items-center ml-1 text-green-600 gap-2">
           {/* paw */}
           <PawPrint className="size-8" />
           <span className="text-xl font-bold">MyZoo</span>
@@ -41,6 +44,26 @@ const Header = () => {
             Contact
           </Link>
         </nav>
+        <div className="flex items-center not-lg:mr-2 gap-4 not-md:gap-1">
+          {session?.user?.name ? (
+            <>
+              <Link
+                href="/profile"
+                className="p-2 rounded-full bg-gradient-to-r from-green-500 to-green-700 text-white font-bold hover:from-green-600 hover:to-green-800 focus:outline-none transition-all"
+              >
+                <CircleUserRound className="size-6" />
+              </Link>
+              <SignOut />
+            </>
+          ) : (
+            <Link
+              className="px-6 py-2 rounded-full bg-gradient-to-r from-green-500 to-green-700 text-white font-bold hover:from-green-600 hover:to-green-800 transition-all"
+              href="/signin"
+            >
+              Sign In
+            </Link>
+          )}
+        </div>
       </div>
     </header>
   );
