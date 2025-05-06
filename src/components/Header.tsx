@@ -49,7 +49,7 @@ const Header = async () => {
             <>
               <Link
                 href="/profile"
-                className="p-2 rounded-full bg-gradient-to-r from-green-500 to-green-700 text-white font-bold hover:from-green-600 hover:to-green-800 focus:outline-none transition-all"
+                className="p-1 rounded-full bg-gradient-to-r from-green-500 to-green-700 text-white font-bold hover:from-green-600 hover:to-green-800 focus:outline-none transition-all"
               >
                 <CircleUserRound className="size-6" />
               </Link>
@@ -57,7 +57,7 @@ const Header = async () => {
             </>
           ) : (
             <Link
-              className="px-6 py-2 rounded-full bg-gradient-to-r from-green-500 to-green-700 text-white font-bold hover:from-green-600 hover:to-green-800 transition-all"
+              className="px-4 py-1 rounded-full bg-gradient-to-r text-sm from-green-500 to-green-700 text-white font-semibold hover:from-green-600 hover:to-green-800 transition-all"
               href="/signin"
             >
               Sign In
