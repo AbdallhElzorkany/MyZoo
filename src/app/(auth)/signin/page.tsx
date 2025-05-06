@@ -4,6 +4,7 @@ import Form from "next/form";
 import { PawPrint } from "lucide-react";
 import { useActionState } from "react";
 import { signInUser, SignInFormState } from "@/actions/auth";
+import { LoadingAuth } from "../loadingAuth";
 export default function SignInPage() {
   const initialState: SignInFormState = {
     errors: {},
@@ -94,7 +95,7 @@ export default function SignInPage() {
                   type="submit"
                   className="w-full rounded-md bg-green-600 px-4 py-2 text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 disabled:opacity-75"
                 >
-                  {isPending ? "Signing in..." : "Sign in"}
+                  {isPending ? <LoadingAuth/> : "Sign in"}
                 </button>
               </div>
             </Form>

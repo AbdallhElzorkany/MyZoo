@@ -135,7 +135,7 @@ export async function signInUser(
     if (error instanceof AuthError) {
       errors.failed = "Invalid email or password";
     } else {
-      redirect("/");
+      redirect("/profile");
     }
     return { errors };
   }
