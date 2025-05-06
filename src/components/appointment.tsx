@@ -29,7 +29,10 @@ export function AppointmentCard({
           <div className="flex flex-col justify-between">
             <div className="flex items-center mt-1 text-sm text-gray-500">
               <Calendar className="mr-1.5 h-4 w-4 flex-shrink-0 text-gray-400" />
-              <span>{format(parseISO(appointmentDate), "MMMM d, yyyy")}</span>
+              <span>
+                {format(parseISO(appointmentDate), "MMMM d, yyyy")}{" "}
+                {format(parseISO(appointmentDate), "h:mm a")}
+              </span>
             </div>
 
             <div className="flex items-center mt-1 text-sm text-gray-500">

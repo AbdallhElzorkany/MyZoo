@@ -49,6 +49,10 @@ export default async function ProfilePage() {
                   <p className="text-sm font-medium text-gray-500">Active</p>
                   <p className="mt-1">{isActive ? "Yes" : "No"}</p>
                 </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-500">ID</p>
+                  <p className="mt-1">{session.user?.id}</p>
+                </div>
               </div>
             </div>
           </div>
