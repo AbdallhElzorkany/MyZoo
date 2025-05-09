@@ -1,4 +1,4 @@
-import { format, parseISO} from "date-fns";
+import { format } from "date-fns";
 import { Bell, Clock, User, PawPrint } from "lucide-react";
 
 export type NotificationCardProps = {
@@ -53,8 +53,8 @@ export function NotificationCard({
             <div className="flex items-center text-xs text-gray-500">
               <Clock className="mr-1 h-3 w-3" />
               <span className="font-medium">Created:</span>{" "}
-              {format(parseISO(createdAt), "MMMM d, yyyy")} at{" "}
-              {format(parseISO(createdAt), "h:mm a")}
+              {format(createdAt, "MMMM d, yyyy")} at{" "}
+              {format(createdAt, "h:mm a")}
             </div>
             <div className="flex items-center text-xs text-gray-500">
               <Bell className="mr-1 h-3 w-3" />

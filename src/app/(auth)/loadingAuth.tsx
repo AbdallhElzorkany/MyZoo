@@ -1,7 +1,8 @@
+import { PawPrint } from "lucide-react";
 export function LoadingAuth() {
   return (
     <div className="flex items-center justify-center">
-      <div className="animate-spin rounded-full size-6 border-b-2 border-t-2 border-white-500"></div>
+      <PawPrint className="animate-spin text-white mr-2 size-6" />
     </div>
   );
 }

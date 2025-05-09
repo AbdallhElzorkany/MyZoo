@@ -92,10 +92,11 @@ export default function SignInPage() {
 
               <div>
                 <button
+                  disabled={isPending}
                   type="submit"
                   className="w-full rounded-md bg-green-600 px-4 py-2 text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 disabled:opacity-75"
                 >
-                  {isPending ? <LoadingAuth/> : "Sign in"}
+                  {isPending ? <LoadingAuth /> : "Sign in"}
                 </button>
               </div>
             </Form>

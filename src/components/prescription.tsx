@@ -1,5 +1,5 @@
 "use client";
-import { format, parseISO } from "date-fns";
+import { format } from "date-fns";
 import { Pill, Calendar } from "lucide-react";
 
 export type PrescriptionCardProps = {
@@ -42,16 +42,16 @@ export function PrescriptionCard({
             <div className="flex items-center text-sm text-gray-600">
               <Calendar className="mr-1.5 h-4 w-4 flex-shrink-0 text-green-600" />
               <span className="font-medium mr-1">Start Date:</span>
-              {format(parseISO(startDate), "MMMM d, yyyy")}
+              {format(startDate, "MMMM d, yyyy")}
               {" at "}
-              {format(parseISO(startDate), "h:mm a")}
+              {format(startDate, "h:mm a")}
             </div>
             <div className="flex items-center text-sm text-gray-600">
               <Calendar className="mr-1.5 h-4 w-4 flex-shrink-0 text-green-600" />
               <span className="font-medium mr-1">End Date:</span>
-              {format(parseISO(endDate), "MMMM d, yyyy")}
+              {format(endDate, "MMMM d, yyyy")}
               {" at "}
-              {format(parseISO(endDate), "h:mm a")}
+              {format(endDate, "h:mm a")}
             </div>
           </div>
           <div className="bg-gray-50 p-3 rounded-md mb-3">

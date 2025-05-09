@@ -1,5 +1,5 @@
 import { Calendar, MapPin, User } from "lucide-react";
-import { format, parseISO } from "date-fns";
+import { format } from "date-fns";
 export type AppointmentCardProps = {
   appointmentDate: string;
   purpose: string;
@@ -28,20 +28,20 @@ export function AppointmentCard({
 
           <div className="flex flex-col justify-between">
             <div className="flex items-center mt-1 text-sm text-gray-500">
-              <Calendar className="mr-1.5 h-4 w-4 flex-shrink-0 text-gray-400" />
+              <Calendar className="text-green-600 mr-1.5 h-4 w-4 flex-shrink-0 " />
               <span>
-                {format(parseISO(appointmentDate), "MMMM d, yyyy")}{" "}
-                {format(parseISO(appointmentDate), "h:mm a")}
+                {format(appointmentDate, "MMMM d, yyyy")}{" "}
+                {format(appointmentDate, "h:mm a")}
               </span>
             </div>
 
             <div className="flex items-center mt-1 text-sm text-gray-500">
-              <User className="mr-1.5 h-4 w-4 flex-shrink-0 text-gray-400" />
+              <User className="mr-1.5 h-4 w-4 flex-shrink-0 text-green-600" />
               <span>{vet}</span>
             </div>
 
             <div className="flex items-center mt-1 text-sm text-gray-500">
-              <MapPin className="mr-1.5 h-4 w-4 flex-shrink-0 text-gray-400" />
+              <MapPin className="mr-1.5 h-4 w-4 flex-shrink-0 text-green-600" />
               <span>{location}</span>
             </div>
           </div>

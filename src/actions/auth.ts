@@ -18,7 +18,7 @@ export type Errors = {
 export type FormState = {
   errors: Errors;
 };
-export async function signUpUser(prevState: FormState, formData: FormData) {
+export async function signUpUser(prevState: FormState | undefined, formData: FormData) {
   "use server";
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
@@ -111,7 +111,7 @@ export type SignInFormState = {
 };
 
 export async function signInUser(
-  prevState: SignInFormState,
+  prevState: SignInFormState | undefined,
   formData: FormData
 ) {
   const email = formData.get("email") as string;

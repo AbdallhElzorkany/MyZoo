@@ -36,6 +36,12 @@ export default function SignUpPage() {
         <div className="mx-auto max-w-md">
           <div className="rounded-lg bg-white p-6 shadow-md">
             <Form action={formAction} className="space-y-4">
+              {state?.errors.failed ? (
+                <div className="rounded-md bg-red-50 text-center p-3 text-sm text-red-500">
+                  {state?.errors.failed}
+                </div>
+              ) : null}
+
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label
@@ -266,14 +272,12 @@ export default function SignUpPage() {
 
               <div>
                 <button
+                  disabled={isPending}
                   type="submit"
                   className="w-full rounded-md bg-green-600 px-4 py-2 text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 disabled:opacity-75"
                 >
-                  {isPending ? <LoadingAuth/> : "Create Account"}
+                  {isPending ? <LoadingAuth /> : "Create Account"}
                 </button>
-                <p className="text-red-500 w-fit mt-2 mx-auto text-sm">
-                  {state?.errors.failed}
-                </p>
               </div>
             </Form>
 
